@@ -12,7 +12,7 @@ public class RecordsFile {
         try(Scanner sc = new Scanner(Paths.get("info.csv"))){
             while (sc.hasNextLine()){
                 String letras = sc.nextLine();
-                if (letras.isBlank())continue;
+                if (letras.isBlank())break;
                 String[] info = letras.split(",");
                 name = info[0];
                 age = Integer.parseInt(info[1]);
